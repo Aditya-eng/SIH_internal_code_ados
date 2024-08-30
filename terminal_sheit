@@ -1,0 +1,392 @@
+ados2405@adospi5:~ $ sudo apt-get update
+Hit:1 http://deb.debian.org/debian bookworm InRelease
+Hit:2 http://deb.debian.org/debian-security bookworm-security InRelease
+Hit:3 http://deb.debian.org/debian bookworm-updates InRelease
+Hit:4 http://deb.debian.org/debian bookworm-backports InRelease
+Hit:5 http://archive.raspberrypi.com/debian bookworm InRelease
+Reading package lists... Done
+ados2405@adospi5:~ $ sudo apt-get upgrade
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+The following package was automatically installed and is no longer required:
+  rpi.gpio-common
+Use 'sudo apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+ados2405@adospi5:~ $ sudo apt-get install cmake
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+cmake is already the newest version (3.25.1-1).
+cmake set to manually installed.
+The following package was automatically installed and is no longer required:
+  rpi.gpio-common
+Use 'sudo apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+ados2405@adospi5:~ $ sudo apt-get install libssl-dev
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  rpi.gpio-common
+Use 'sudo apt autoremove' to remove it.
+Suggested packages:
+  libssl-doc
+The following NEW packages will be installed:
+  libssl-dev
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 2,310 kB of archives.
+After this operation, 12.8 MB of additional disk space will be used.
+Get:1 http://archive.raspberrypi.com/debian bookworm/main arm64 libssl-dev arm64 3.0.13-1~deb12u1+rpt1 [2,310 kB]
+Fetched 2,310 kB in 3s (847 kB/s)       
+Selecting previously unselected package libssl-dev:arm64.
+(Reading database ... 178393 files and directories currently installed.)
+Preparing to unpack .../libssl-dev_3.0.13-1~deb12u1+rpt1_arm64.deb ...
+Unpacking libssl-dev:arm64 (3.0.13-1~deb12u1+rpt1) ...
+Setting up libssl-dev:arm64 (3.0.13-1~deb12u1+rpt1) ...
+ados2405@adospi5:~ $ git --version
+git version 2.39.2
+ados2405@adospi5:~ $ python3 --version
+Python 3.11.2
+ados2405@adospi5:~ $ pip3 --version
+pip 23.0.1 from /usr/lib/python3/dist-packages/pip (python 3.11)
+ados2405@adospi5:~ $ python3 -m pip install awsiotsdk
+error: externally-managed-environment
+
+× This environment is externally managed
+╰─> To install Python packages system-wide, try apt install
+    python3-xyz, where xyz is the package you are trying to
+    install.
+    
+    If you wish to install a non-Debian-packaged Python package,
+    create a virtual environment using python3 -m venv path/to/venv.
+    Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+    sure you have python3-full installed.
+    
+    For more information visit http://rptl.io/venv
+
+note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+hint: See PEP 668 for the detailed specification.
+ados2405@adospi5:~ $ source .venv/bin/activate
+bash: .venv/bin/activate: No such file or directory
+ados2405@adospi5:~ $ cd
+ados2405@adospi5:~ $ cd ~
+ados2405@adospi5:~ $ python3 -m venv path/to/venv.
+ados2405@adospi5:~ $ source .venv/bin/activate
+bash: .venv/bin/activate: No such file or directory
+ados2405@adospi5:~ $ python3 -m venv myvenv
+ados2405@adospi5:~ $ source myvenv/bin/activate
+(myvenv) ados2405@adospi5:~ $ python3 -m pip install awsiotsdk
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Collecting awsiotsdk
+  Downloading https://www.piwheels.org/simple/awsiotsdk/awsiotsdk-1.22.0-py3-none-any.whl (75 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 75.0/75.0 kB 189.6 kB/s eta 0:00:00
+Collecting awscrt==0.21.1
+  Downloading awscrt-0.21.1-cp311-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (7.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.8/7.8 MB 2.6 MB/s eta 0:00:00
+Installing collected packages: awscrt, awsiotsdk
+Successfully installed awscrt-0.21.1 awsiotsdk-1.22.0
+(myvenv) ados2405@adospi5:~ $ git clone https://github.com/aws/aws-iot-device-sdk-python-v2.git
+Cloning into 'aws-iot-device-sdk-python-v2'...
+remote: Enumerating objects: 2666, done.
+remote: Counting objects: 100% (1150/1150), done.
+remote: Compressing objects: 100% (368/368), done.
+remote: Total 2666 (delta 899), reused 895 (delta 759), pack-reused 1516 (from 1)
+Receiving objects: 100% (2666/2666), 2.24 MiB | 2.66 MiB/s, done.
+Resolving deltas: 100% (1730/1730), done.
+(myvenv) ados2405@adospi5:~ $ la
+bash: la: command not found
+(myvenv) ados2405@adospi5:~ $ ls
+Arduino                         Desktop    myvenv    Templates
+arduino-1.8.19-linuxarm.tar.xz  Documents  path      Videos
+aws-iot-device-sdk-python-v2    Downloads  pi-apps
+Bookshelf                       index.php  Pictures
+c4gt-website                    Music      Public
+(myvenv) ados2405@adospi5:~ $ cd aws-iot-device-sdk-python-v2
+(myvenv) ados2405@adospi5:~/aws-iot-device-sdk-python-v2 $ ls
+awsiot        deviceadvisor  make-docs.py  servicetests  test
+builder.json  docsrc         README.md     setup.cfg     utils
+codebuild     documents      samples       setup.py
+(myvenv) ados2405@adospi5:~/aws-iot-device-sdk-python-v2 $ cd samples
+(myvenv) ados2405@adospi5:~/aws-iot-device-sdk-python-v2/samples $ ls
+basic_connect.md                    mqtt5_pubsub.md
+basic_connect.py                    mqtt5_pubsub.py
+basic_discovery.md                  mqtt5_shared_subscription.md
+basic_discovery.py                  mqtt5_shared_subscription.py
+cognito_connect.md                  pkcs11_connect.md
+cognito_connect.py                  pkcs11_connect.py
+custom_authorizer_connect.md        pkcs12_connect.md
+custom_authorizer_connect.py        pkcs12_connect.py
+fleetprovisioning.md                pubsub.md
+fleetprovisioning_mqtt5.md          pubsub.py
+fleetprovisioning_mqtt5.py          README.md
+fleetprovisioning.py                shadow.md
+ipc_greengrass.md                   shadow_mqtt5.md
+ipc_greengrass.py                   shadow_mqtt5.py
+jobs.md                             shadow.py
+jobs_mqtt5.md                       utils
+jobs_mqtt5.py                       websocket_connect.md
+jobs.py                             websocket_connect.py
+mqtt5_custom_authorizer_connect.md  windows_cert_connect.md
+mqtt5_custom_authorizer_connect.py  windows_cert_connect.py
+mqtt5_pkcs11_connect.md             x509_connect.md
+mqtt5_pkcs11_connect.py             x509_connect.py
+(myvenv) ados2405@adospi5:~/aws-iot-device-sdk-python-v2/samples $ cd ..
+(myvenv) ados2405@adospi5:~/aws-iot-device-sdk-python-v2 $ cd ..
+(myvenv) ados2405@adospi5:~ $ cd ..
+(myvenv) ados2405@adospi5:/home $ ls
+ados2405
+(myvenv) ados2405@adospi5:/home $ cd ados2405
+(myvenv) ados2405@adospi5:~ $ cd Desktop
+(myvenv) ados2405@adospi5:~/Desktop $ python3 -m pip install awsiotsdk
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Requirement already satisfied: awsiotsdk in /home/ados2405/myvenv/lib/python3.11/site-packages (1.22.0)
+Requirement already satisfied: awscrt==0.21.1 in /home/ados2405/myvenv/lib/python3.11/site-packages (from awsiotsdk) (0.21.1)
+(myvenv) ados2405@adospi5:~/Desktop $ git clone https://github.com/aws/aws-iot-device-sdk-python-v2.git
+Cloning into 'aws-iot-device-sdk-python-v2'...
+remote: Enumerating objects: 2666, done.
+remote: Counting objects: 100% (1137/1137), done.
+remote: Compressing objects: 100% (368/368), done.
+remote: Total 2666 (delta 887), reused 882 (delta 746), pack-reused 1529 (from 1)
+Receiving objects: 100% (2666/2666), 2.24 MiB | 2.18 MiB/s, done.
+Resolving deltas: 100% (1730/1730), done.
+(myvenv) ados2405@adospi5:~/Desktop $ python3 pubsub.py
+python3: can't open file '/home/ados2405/Desktop/pubsub.py': [Errno 2] No such file or directory
+(myvenv) ados2405@adospi5:~/Desktop $ python3 pubsub.py --topic topic_1 --ca_file ~/certs/rootCA.pem --cert ~/certs/device.pem.crt --key ~/certs/private.pem.key --endpoint aftnrjs54yfev-ats.iot.eu-north-1.amazonaws.com
+python3: can't open file '/home/ados2405/Desktop/pubsub.py': [Errno 2] No such file or directory
+(myvenv) ados2405@adospi5:~/Desktop $ cd aws-iot-device-sdk-python-v2/samples
+(myvenv) ados2405@adospi5:~/Desktop/aws-iot-device-sdk-python-v2/samples $ python3 pubsub.py --topic topic_1 --ca_file ~/certs/rootCA.pem --cert ~/certs/device.pem.crt --key ~/certs/private.pem.key --endpoint aftnrjs54yfev-ats.iot.eu-north-1.amazonaws.com
+Traceback (most recent call last):
+  File "/home/ados2405/Desktop/aws-iot-device-sdk-python-v2/samples/pubsub.py", line 84, in <module>
+    mqtt_connection = mqtt_connection_builder.mtls_from_path(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ados2405/myvenv/lib/python3.11/site-packages/awsiot/mqtt_connection_builder.py", line 275, in mtls_from_path
+    tls_ctx_options = awscrt.io.TlsContextOptions.create_client_with_mtls_from_path(cert_filepath, pri_key_filepath)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ados2405/myvenv/lib/python3.11/site-packages/awscrt/io.py", line 347, in create_client_with_mtls_from_path
+    cert_buffer = _read_binary_file(cert_filepath)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ados2405/myvenv/lib/python3.11/site-packages/awscrt/io.py", line 186, in _read_binary_file
+    with open(filepath, mode='rb') as fh:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ados2405/ce(((myvenv) ados2405@adospi5:~/Desktop/aws-iot-device-sdk-python-v2/samples $ python3 pubsub.py --topic topic_1 --ca_file ~/certs/rootCA.pem --cert ~/certs/device.pem.crt --key ~/certs/private.pem.key --endpoint aftnrjs54yfev-ats.iot.eu-north-1.amazonaws.com
+Connecting to aftnrjs54yfev-ats.iot.eu-north-1.amazonaws.com with client ID 'test-32ffbcf1-1d7f-4a31-8d2a-379ed5db2057'...
+Connection Successful with return code: 0 session present: False
+Connected!
+Subscribing to topic 'topic_1'...
+Subscribed with 1
+Sending 10 message(s)
+Publishing message to topic 'topic_1': Hello World!  [1]
+Received message from topic 'topic_1': b'"Hello World!  [1]"'
+Publishing message to topic 'topic_1': Hello World!  [2]
+Received message from topic 'topic_1': b'"Hello World!  [2]"'
+Publishing message to topic 'topic_1': Hello World!  [3]
+Received message from topic 'topic_1': b'"Hello World!  [3]"'
+Publishing message to topic 'topic_1': Hello World!  [4]
+Received message from topic 'topic_1': b'"Hello World!  [4]"'
+Publishing message to topic 'topic_1': Hello World!  [5]
+Received message from topic 'topic_1': b'"Hello World!  [5]"'
+Publishing message to topic 'topic_1': Hello World!  [6]
+Received message from topic 'topic_1': b'"Hello World!  [6]"'
+Publishing message to topic 'topic_1': Hello World!  [7]
+Received message from topic 'topic_1': b'"Hello World!  [7]"'
+Publishing message to topic 'topic_1': Hello World!  [8]
+Received message from topic 'topic_1': b'"Hello World!  [8]"'
+Publishing message to topic 'topic_1': Hello World!  [9]
+Received message from topic 'topic_1': b'"Hello World!  [9]"'
+Publishing message to topic 'topic_1': Hello World!  [10]
+Received message from topic 'topic_1': b'"Hello World!  [10]"'
+10 message(s) received.
+Disconnecting...
+Connection closed
+Disconnected!
+(myvenv) ados2405@adospi5:~/Desktop/aws-iot-device-sdk-python-v2/samples $ python3 pubsub.py --topic topic_1 --ca_file ~/certs/rootCA.pem --cert ~/certs/device.pem.crt --key ~/certs/private.pem.key --endpoint aftnrjs54yfev-ats.iot.eu-north-1.amazonaws.com
+Connecting to aftnrjs54yfev-ats.iot.eu-north-1.amazonaws.com with client ID 'test-d372a72b-9aed-4b1a-ad37-fe2a35ac3234'...
+Connection Successful with return code: 0 session present: False
+Connected!
+Subscribing to topic 'topic_1'...
+Subscribed with 1
+Sending 10 message(s)
+Publishing message to topic 'topic_1': Hello World!  [1]
+Received message from topic 'topic_1': b'"Hello World!  [1]"'
+Publishing message to topic 'topic_1': Hello World!  [2]
+Received message from topic 'topic_1': b'"Hello World!  [2]"'
+Publishing message to topic 'topic_1': Hello World!  [3]
+Received message from topic 'topic_1': b'"Hello World!  [3]"'
+Publishing message to topic 'topic_1': Hello World!  [4]
+Received message from topic 'topic_1': b'"Hello World!  [4]"'
+Publishing message to topic 'topic_1': Hello World!  [5]
+Received message from topic 'topic_1': b'"Hello World!  [5]"'
+Publishing message to topic 'topic_1': Hello World!  [6]
+Received message from topic 'topic_1': b'"Hello World!  [6]"'
+Publishing message to topic 'topic_1': Hello World!  [7]
+Received message from topic 'topic_1': b'"Hello World!  [7]"'
+Publishing message to topic 'topic_1': Hello World!  [8]
+Received message from topic 'topic_1': b'"Hello World!  [8]"'
+Publishing message to topic 'topic_1': Hello World!  [9]
+Received message from topic 'topic_1': b'"Hello World!  [9]"'
+Publishing message to topic 'topic_1': Hello World!  [10]
+Received message from topic 'topic_1': b'"Hello World!  [10]"'
+10 message(s) received.
+Disconnecting...
+Connection closed
+Disconnected!
+(myvenv) ados2405@adospi5:~/Desktop/aws-iot-device-sdk-python-v2/samples $ python3 pubsub.py --topic topic_1 --ca_file ~/certs/rootCA.pem --cert ~/certs/device.pem.crt --key ~/certs/private.pem.key --endpoint aftnrjs54yfev-ats.iot.eu-north-1.amazonaws.com
+Connecting to aftnrjs54yfev-ats.iot.eu-north-1.amazonaws.com with client ID 'test-448abcad-0776-449c-958c-84d3c280e0fb'...
+Connection Successful with return code: 0 session present: False
+Connected!
+Subscribing to topic 'topic_1'...
+Subscribed with 1
+Sending 10 message(s)
+Publishing message to topic 'topic_1': Hello World!  [1]
+Received message from topic 'topic_1': b'"Hello World!  [1]"'
+Publishing message to topic 'topic_1': Hello World!  [2]
+Received message from topic 'topic_1': b'"Hello World!  [2]"'
+Publishing message to topic 'topic_1': Hello World!  [3]
+Received message from topic 'topic_1': b'"Hello World!  [3]"'
+Publishing message to topic 'topic_1': Hello World!  [4]
+Received message from topic 'topic_1': b'"Hello World!  [4]"'
+Publishing message to topic 'topic_1': Hello World!  [5]
+Received message from topic 'topic_1': b'"Hello World!  [5]"'
+Publishing message to topic 'topic_1': Hello World!  [6]
+Received message from topic 'topic_1': b'"Hello World!  [6]"'
+Publishing message to topic 'topic_1': Hello World!  [7]
+Received message from topic 'topic_1': b'"Hello World!  [7]"'
+Publishing message to topic 'topic_1': Hello World!  [8]
+Received message from topic 'topic_1': b'"Hello World!  [8]"'
+Publishing message to topic 'topic_1': Hello World!  [9]
+Received message from topic 'topic_1': b'"Hello World!  [9]"'
+Publishing message to topic 'topic_1': Hello World!  [10]
+Received message from topic 'topic_1': b'"Hello World!  [10]"'
+10 message(s) received.
+Disconnecting...
+Connection closed
+Disconnected!
+(myvenv) ados2405@adospi5:~/Desktop/aws-iot-device-sdk-python-v2/samples $ ls -l
+total 356
+-rw-r--r-- 1 ados2405 ados2405  2329 Aug 31 00:21 basic_connect.md
+-rw-r--r-- 1 ados2405 ados2405  2553 Aug 31 00:21 basic_connect.py
+-rw-r--r-- 1 ados2405 ados2405   597 Aug 31 00:21 basic_discovery.md
+-rw-r--r-- 1 ados2405 ados2405  4590 Aug 31 00:21 basic_discovery.py
+-rw-r--r-- 1 ados2405 ados2405  4069 Aug 31 00:21 cognito_connect.md
+-rw-r--r-- 1 ados2405 ados2405  3161 Aug 31 00:21 cognito_connect.py
+-rw-r--r-- 1 ados2405 ados2405  4168 Aug 31 00:21 custom_authorizer_connect.md
+-rw-r--r-- 1 ados2405 ados2405  2415 Aug 31 00:21 custom_authorizer_connect.py
+-rw-r--r-- 1 ados2405 ados2405 15541 Aug 31 00:21 fleetprovisioning.md
+-rw-r--r-- 1 ados2405 ados2405 17375 Aug 31 00:21 fleetprovisioning_mqtt5.md
+-rw-r--r-- 1 ados2405 ados2405 15154 Aug 31 00:21 fleetprovisioning_mqtt5.py
+-rw-r--r-- 1 ados2405 ados2405 15682 Aug 31 00:21 fleetprovisioning.py
+-rw-r--r-- 1 ados2405 ados2405  3787 Aug 31 00:21 ipc_greengrass.md
+-rw-r--r-- 1 ados2405 ados2405  2123 Aug 31 00:21 ipc_greengrass.py
+-rw-r--r-- 1 ados2405 ados2405  4596 Aug 31 00:21 jobs.md
+-rw-r--r-- 1 ados2405 ados2405  6373 Aug 31 00:21 jobs_mqtt5.md
+-rw-r--r-- 1 ados2405 ados2405 15303 Aug 31 00:21 jobs_mqtt5.py
+-rw-r--r-- 1 ados2405 ados2405 14859 Aug 31 00:21 jobs.py
+-rw-r--r-- 1 ados2405 ados2405  4784 Aug 31 00:21 mqtt5_custom_authorizer_connect.md
+-rw-r--r-- 1 ados2405 ados2405  3233 Aug 31 00:21 mqtt5_custom_authorizer_connect.py
+-rw-r--r-- 1 ados2405 ados2405  5330 Aug 31 00:21 mqtt5_pkcs11_connect.md
+-rw-r--r-- 1 ados2405 ados2405  2714 Aug 31 00:21 mqtt5_pkcs11_connect.py
+-rw-r--r-- 1 ados2405 ados2405  9436 Aug 31 00:21 mqtt5_pubsub.md
+-rw-r--r-- 1 ados2405 ados2405  5824 Aug 31 00:21 mqtt5_pubsub.py
+-rw-r--r-- 1 ados2405 ados2405  5028 Aug 31 00:21 mqtt5_shared_subscription.md
+-rw-r--r-- 1 ados2405 ados2405  9584 Aug 31 00:21 mqtt5_shared_subscription.py
+-rw-r--r-- 1 ados2405 ados2405  5078 Aug 31 00:21 pkcs11_connect.md
+-rw-r--r-- 1 ados2405 ados2405  2904 Aug 31 00:21 pkcs11_connect.py
+-rw-r--r-- 1 ados2405 ados2405  2932 Aug 31 00:21 pkcs12_connect.md
+-rw-r--r-- 1 ados2405 ados2405  2612 Aug 31 00:21 pkcs12_connect.py
+-rw-r--r-- 1 ados2405 ados2405  3204 Aug 31 00:21 pubsub.md
+-rw-r--r-- 1 ados2405 ados2405  6487 Aug 31 00:21 pubsub.py
+-rw-r--r-- 1 ados2405 ados2405  3054 Aug 31 00:21 README.md
+-rw-r--r-- 1 ados2405 ados2405  4620 Aug 31 00:21 shadow.md
+-rw-r--r-- 1 ados2405 ados2405  6420 Aug 31 00:21 shadow_mqtt5.md
+-rw-r--r-- 1 ados2405 ados2405 16688 Aug 31 00:21 shadow_mqtt5.py
+-rw-r--r-- 1 ados2405 ados2405 16210 Aug 31 00:21 shadow.py
+drwxr-xr-x 3 ados2405 ados2405  4096 Aug 31 00:31 utils
+-rw-r--r-- 1 ados2405 ados2405  9048 Aug 31 00:21 websocket_connect.md
+-rw-r--r-- 1 ados2405 ados2405  2726 Aug 31 00:21 websocket_connect.py
+-rw-r--r-- 1 ados2405 ados2405  5484 Aug 31 00:21 windows_cert_connect.md
+-rw-r--r-- 1 ados2405 ados2405  2206 Aug 31 00:21 windows_cert_connect.py
+-rw-r--r-- 1 ados2405 ados2405  3067 Aug 31 00:21 x509_connect.md
+-rw-r--r-- 1 ados2405 ados2405  3382 Aug 31 00:21 x509_connect.py
+(myvenv) ados2405@adospi5:~/Desktop/aws-iot-device-sdk-python-v2/samples $ code .
+(myvenv) ados2405@adospi5:~/Desktop/aws-iot-device-sdk-python-v2/samples $ python3 pubsub.py --topic topic_1 --ca_file ~/certs/rootCA.pem --cert ~/certs/device.pem.crt --key ~/certs/private.pem.key --endpoint aftnrjs54yfev-ats.iot.eu-north-1.amazonaws.com
+Traceback (most recent call last):
+  File "/home/ados2405/Desktop/aws-iot-device-sdk-python-v2/samples/pubsub.py", line 11, in <module>
+    import psutils
+ModuleNotFoundError: No module named 'psutils'
+(myvenv) ados2405@adospi5:~/Desktop/aws-iot-device-sdk-python-v2/samples $ pip3 install psutils
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+ERROR: Could not find a version that satisfies the requirement psutils (from versions: none)
+ERROR: No matching distribution found for psutils
+(myvenv) ados2405@adospi5:~/Desktop/aws-iot-device-sdk-python-v2/samples $ pip3 install time
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+ERROR: Could not find a version that satisfies the requirement time (from versions: none)
+ERROR: No matching distribution found for time
+(myvenv) ados2405@adospi5:~/Desktop/aws-iot-device-sdk-python-v2/samples $ python3 pubsub.py --topic topic_1 --ca_file ~/certs/rootCA.pem --cert ~/certs/device.pem.crt --key ~/certs/private.pem.key --endpoint aftnrjs54yfev-ats.iot.eu-north-1.amazonaws.com
+Connecting to aftnrjs54yfev-ats.iot.eu-north-1.amazonaws.com with client ID 'test-ecbb8b05-daf5-41c7-8bfb-2b55684c03b0'...
+Connection Successful with return code: 0 session present: False
+Connected!
+Subscribing to topic 'topic_1'...
+Subscribed with 1
+Sending 10 message(s)
+Traceback (most recent call last):
+  File "/home/ados2405/Desktop/aws-iot-device-sdk-python-v2/samples/pubsub.py", line 143, in <module>
+    "time": init(time.time()),
+            ^^^^
+NameError: name 'init' is not defined. Did you mean: 'int'?
+(myvenv) ados2405@adospi5:~/Desktop/aws-iot-device-sdk-python-v2/samples $ python3 pubsub.py --topic topic_1 --ca_file ~/certs/rootCA.pem --cert ~/certs/device.pem.crt --key ~/certs/private.pem.key --endpoint aftnrjs54yfev-ats.iot.eu-north-1.amazonaws.com
+Connecting to aftnrjs54yfev-ats.iot.eu-north-1.amazonaws.com with client ID 'test-2d11b33c-8694-48c7-ae68-fc24a763ce5b'...
+Connection Successful with return code: 0 session present: False
+Connected!
+Subscribing to topic 'topic_1'...
+Subscribed with 1
+Sending 10 message(s)
+Traceback (most recent call last):
+  File "/home/ados2405/Desktop/aws-iot-device-sdk-python-v2/samples/pubsub.py", line 143, in <module>
+    "time": init(time.time()),
+            ^^^^
+NameError: name 'init' is not defined. Did you mean: 'int'?
+(myvenv) ados2405@adospi5:~/Desktop/aws-iot-device-sdk-python-v2/samples $ python3 pubsub.py --topic topic_1 --ca_file ~/certs/rootCA.pem --cert ~/certs/device.pem.crt --key ~/certs/private.pem.key --endpoint aftnrjs54yfev-ats.iot.eu-north-1.amazonaws.com
+Connecting to aftnrjs54yfev-ats.iot.eu-north-1.amazonaws.com with client ID 'test-a4ef72b7-7be6-4c89-ac6c-309d1641e759'...
+Connection Successful with return code: 0 session present: False
+Connected!
+Subscribing to topic 'topic_1'...
+Subscribed with 1
+Sending 10 message(s)
+Received message from topic 'topic_1': b'{\n  "time": 1725045980,\n  "quality": "GOOD",\n  "hostname": "Garg\'s raspi",\n  "value": "Mon Aug  2 18:15:13 2021"\n}'
+Received message from topic 'topic_1': b'{\n  "time": 1725045981,\n  "quality": "GOOD",\n  "hostname": "Garg\'s raspi",\n  "value": "Mon Aug  2 18:15:13 2021"\n}'
+Received message from topic 'topic_1': b'{\n  "time": 1725045982,\n  "quality": "GOOD",\n  "hostname": "Garg\'s raspi",\n  "value": "Mon Aug  2 18:15:13 2021"\n}'
+Received message from topic 'topic_1': b'{\n  "time": 1725045983,\n  "quality": "GOOD",\n  "hostname": "Garg\'s raspi",\n  "value": "Mon Aug  2 18:15:13 2021"\n}'
+Received message from topic 'topic_1': b'{\n  "time": 1725045984,\n  "quality": "GOOD",\n  "hostname": "Garg\'s raspi",\n  "value": "Mon Aug  2 18:15:13 2021"\n}'
+Received message from topic 'topic_1': b'{\n  "time": 1725045985,\n  "quality": "GOOD",\n  "hostname": "Garg\'s raspi",\n  "value": "Mon Aug  2 18:15:13 2021"\n}'
+Received message from topic 'topic_1': b'{\n  "time": 1725045986,\n  "quality": "GOOD",\n  "hostname": "Garg\'s raspi",\n  "value": "Mon Aug  2 18:15:13 2021"\n}'
+Received message from topic 'topic_1': b'{\n  "time": 1725045987,\n  "quality": "GOOD",\n  "hostname": "Garg\'s raspi",\n  "value": "Mon Aug  2 18:15:13 2021"\n}'
+Received message from topic 'topic_1': b'{\n  "time": 1725045988,\n  "quality": "GOOD",\n  "hostname": "Garg\'s raspi",\n  "value": "Mon Aug  2 18:15:13 2021"\n}'
+Received message from topic 'topic_1': b'{\n  "time": 1725045989,\n  "quality": "GOOD",\n  "hostname": "Garg\'s raspi",\n  "value": "Mon Aug  2 18:15:13 2021"\n}'
+10 message(s) received.
+Disconnecting...
+Connection closed
+Disconnected!
+(myvenv) ados2405@adospi5:~/Desktop/aws-iot-device-sdk-python-v2/samples $ python3 pubsub.py --topic topic_1 --ca_file ~/certs/rootCA.pem --cert ~/certs/device.pem.crt --key ~/certs/private.pem.key --endpoint aftnrjs54yfev-ats.iot.eu-north-1.amazonaws.com
+Connecting to aftnrjs54yfev-ats.iot.eu-north-1.amazonaws.com with client ID 'test-2212d5e5-8a8b-468d-bd4a-fefd5a29933a'...
+Connection Successful with return code: 0 session present: False
+Connected!
+Subscribing to topic 'topic_1'...
+Subscribed with 1
+Sending 10 message(s)
+Received message from topic 'topic_1': b'{\n  "time": 1725046133,\n  "quality": "GOOD",\n  "hostname": "Garg\'s raspi",\n  "value": "00 : 58 : 53"\n}'
+Received message from topic 'topic_1': b'{\n  "time": 1725046134,\n  "quality": "GOOD",\n  "hostname": "Garg\'s raspi",\n  "value": "00 : 58 : 54"\n}'
+Received message from topic 'topic_1': b'{\n  "time": 1725046135,\n  "quality": "GOOD",\n  "hostname": "Garg\'s raspi",\n  "value": "00 : 58 : 55"\n}'
+Received message from topic 'topic_1': b'{\n  "time": 1725046136,\n  "quality": "GOOD",\n  "hostname": "Garg\'s raspi",\n  "value": "00 : 58 : 56"\n}'
+Received message from topic 'topic_1': b'{\n  "time": 1725046137,\n  "quality": "GOOD",\n  "hostname": "Garg\'s raspi",\n  "value": "00 : 58 : 57"\n}'
+Received message from topic 'topic_1': b'{\n  "time": 1725046138,\n  "quality": "GOOD",\n  "hostname": "Garg\'s raspi",\n  "value": "00 : 58 : 58"\n}'
+Received message from topic 'topic_1': b'{\n  "time": 1725046139,\n  "quality": "GOOD",\n  "hostname": "Garg\'s raspi",\n  "value": "00 : 58 : 59"\n}'
+Received message from topic 'topic_1': b'{\n  "time": 1725046140,\n  "quality": "GOOD",\n  "hostname": "Garg\'s raspi",\n  "value": "00 : 59 : 00"\n}'
+Received message from topic 'topic_1': b'{\n  "time": 1725046141,\n  "quality": "GOOD",\n  "hostname": "Garg\'s raspi",\n  "value": "00 : 59 : 01"\n}'
+Received message from topic 'topic_1': b'{\n  "time": 1725046142,\n  "quality": "GOOD",\n  "hostname": "Garg\'s raspi",\n  "value": "00 : 59 : 02"\n}'
+10 message(s) received.
+Disconnecting...
+Connection closed
+Disconnected!
+(myvenv) ados2405@adospi5:~/Desktop/aws-iot-device-sdk-python-v2/samples $
